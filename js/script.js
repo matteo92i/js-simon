@@ -19,10 +19,17 @@ for(x = 1; x <= 5; x++){
 alert(listaNumAlert);
 
 let secondi = 5;
+let numeriInseriti = [];
 
 setTimeout(function(){
-    parseInt(prompt('inserire i 5 numeri'))
+    for(x = 1; x <= 5; x++){
+        let inserisciNum = parseInt(prompt('inserire i 5 numeri'));
+        numeriInseriti.push(inserisciNum);
+    }
 }, secondi * 1000);
+
+
+    
 
 
 
