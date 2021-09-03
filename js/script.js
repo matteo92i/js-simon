@@ -1,19 +1,19 @@
-var numeriRandomPc = [];
+// // Un alert() espone 5 numeri generati casualmente.
+// // Da li parte un timer di 30 secondi.
+// // Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, 
+// tramite il prompt().
+// // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono 
+// stati individuati.
 
-while (numeriRandomPc.length < 5){
-    var numeriRandom = Math.floor(Math.random()* 100) +1
-    if(!numeriRandomPc.includes(numeriRandom)){
-        numeriRandomPc.push(numeriRandom)
-    }
+function generaNumRandom (min, max){
+
+    return Math.floor(Math.random() * ( max - min + 1)) + min;
 }
+listaNumAlert =[];
 
-alert('fai attenzione ai numeri' + numeriRandomPc)
-var numeriInseritiGiocatore
-setTimeout(function(){
-    while (numeriInseritiGiocatore.length < numeriRandomPc){
-        var numeriGiocatore = parseInt(prompt('inserire un numero dell alert'))
-        if (numeriInseritiGiocatore.push(numeriGiocatore)){
-            alert('continua')
-        }
-    }
-})
+for(x = 1; x <= 5; x++){
+    let num = generaNumRandom(1,100);
+    listaNumAlert.push(num);
+
+}
+alert(listaNumAlert)
