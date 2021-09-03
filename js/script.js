@@ -16,4 +16,13 @@ for(x = 1; x <= 5; x++){
     listaNumAlert.push(num);
 
 }
-alert(listaNumAlert)
+alert(listaNumAlert);
+
+let secondi = 5;
+
+setTimeout(function(){
+    parseInt(prompt('inserire i 5 numeri'))
+}, secondi * 1000);
+
+
+
